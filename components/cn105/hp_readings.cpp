@@ -333,14 +333,14 @@ void CN105Climate::getDataFromResponsePacket() {
     case 0x22: {
         ESP_LOGD("Decoder", "[Packet Functions 0x20 et 0x22]");
         //this->last_received_packet_sensor->publish_state("0x62-> 0x20/0x22: Data -> Packet functions");
-        if (dataLength == 0x10) {
+        // if (dataLength == 0x10) {
             if (data[0] == 0x20) {
                 functions.setData1(&data[1]);
             } else {
                 functions.setData2(&data[1]);
             }
 
-        }
+        // }
 
     }
              break;
